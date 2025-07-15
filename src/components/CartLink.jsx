@@ -7,15 +7,10 @@ const CartLink = () => {
   const { totalItems } = useCart()
 
   return (
-    <Link to="/cart" className="nav-link position-relative">
-      <IoCartOutline size={30} 
-      />
+    <Link to="/cart" className="cart-icon-link">
+      <IoCartOutline size={30} className="cart-icon" />
       {totalItems > 0 && (
-        <Badge
-          pill
-          bg="danger"
-          className="position-absolute top-0"
-        >
+        <Badge bg="danger" className="cart-badge">
           {totalItems}
         </Badge>
       )}
